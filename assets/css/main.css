@@ -3670,7 +3670,7 @@ input, select, textarea {
 		}
 
 			#banner .more:after {
-				background-image: url("images/motorsport/fig_1.jpg");
+				background-image: url("../../images/motorsport/fig_1.jpg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
@@ -3998,3 +3998,4 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
