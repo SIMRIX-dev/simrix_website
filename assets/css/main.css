@@ -3821,18 +3821,20 @@ input, select, textarea {
 
 /* Main */
 
-	#main > header {
-		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-attachment: fixed;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		text-align: center;
-	}
+		#main > header {
+	    padding: 12em 0 10em 0;
+	
+	    background-image:
+	        linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+	        var(--page-header-bg);
+	
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	
+	    text-align: center;
+		}
 
 		#main > header h2 {
 			font-size: 1.75em;
@@ -4006,3 +4008,4 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
