@@ -5,6 +5,7 @@
 	Spectral by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 
 html, body, div, span, applet, object,
@@ -3582,7 +3583,15 @@ input, select, textarea {
 		overflow: hidden;
 		position: relative;
 		text-align: center;
-	}
+
+		padding: 8em 0 6em 0;
+	    text-align: center;
+	
+	    background-image: url("../../images/motorsport/fig_1.jpg");
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+		}
 
 		#banner h2 {
 			-moz-transform: scale(1);
