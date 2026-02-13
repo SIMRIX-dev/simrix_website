@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+-->
+<html>
+	<head>
+		<title>Support – SIMRIX</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<h1><a href="index.html">SIMRIX</a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="special">
+							<a href="#menu" class="menuToggle"><span>Menu</span></a>
+							<div id="menu">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="software.html">Software</a></li>
+									<li><a href="licensing.html">Licensing</a></li>
+									<li><a href="about.html">About</a></li>
+									<li><a href="support.html">Support</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Main -->
+			<article id="main">
+				<header>
+					<h2>Support & Contact</h2>
+					<p>
+						For general questions, feedback, technical issues,
+						or collaboration inquiries.
+					</p>
+				</header>
+
+				<section class="wrapper style5">
+					<div class="inner">
+
+						<h3>When to Use This Page</h3>
+						<ul>
+							<li>General software questions</li>
+							<li>Bug reports or unexpected behaviour</li>
+							<li>Feature suggestions</li>
+							<li>Collaboration or academic inquiries</li>
+						</ul>
+
+						<p>
+							For license-related matters, please use the
+							<strong>Licensing</strong> page instead.
+						</p>
+
+						<hr />
+
+						<h3>Support Request Form</h3>
+						<p>
+							Submit your message below. Responses are typically
+							provided within a reasonable timeframe depending on
+							request complexity.
+						</p>
+
+						<!-- SUPPORT FORM -->
+						<form id="support-form">
+							<div class="row gtr-uniform">
+
+								<!-- Name -->
+								<div class="col-6 col-12-xsmall">
+									<input type="text" name="name" placeholder="Your Name" required />
+								</div>
+
+								<!-- Email -->
+								<div class="col-6 col-12-xsmall">
+									<input type="email" name="email" placeholder="Your Email Address" required />
+								</div>
+
+								<!-- How they heard -->
+								<div class="col-12">
+									<input type="text" name="source" placeholder="How did you hear about SIMRIX?" />
+								</div>
+
+								<!-- Type of Inquiry -->
+								<div class="col-12">
+									<label><strong>Type of Inquiry</strong></label>
+									<select name="inquiry_type" required>
+										<option value="">-- Select --</option>
+										<option value="General Question">General Question</option>
+										<option value="Bug Report">Bug Report</option>
+										<option value="Feature Request">Feature Request</option>
+										<option value="Collaboration">Collaboration Inquiry</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
+
+								<!-- Message -->
+								<div class="col-12">
+									<textarea
+										name="message"
+										placeholder="Describe your question, issue, or feedback in detail"
+										rows="6"
+										required
+									></textarea>
+								</div>
+
+								<!-- Submit -->
+								<div class="col-12">
+									<ul class="actions">
+										<li>
+											<button type="submit" class="primary">
+												Submit Support Request
+											</button>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+						</form>
+
+						<!-- SUCCESS MESSAGE -->
+						<div id="support-success" style="display:none;">
+							<h3>Message Sent</h3>
+							<p>
+								Your message has been successfully submitted.
+								You will receive a response at the provided
+								email address.
+							</p>
+						</div>
+
+						<!-- ERROR MESSAGE -->
+						<div id="support-error" style="display:none;">
+							<h3>Submission Failed</h3>
+							<p>
+								An error occurred while submitting your message.
+								Please try again later or contact support directly.
+							</p>
+						</div>
+
+						<hr />
+
+						<h3>Direct Contact</h3>
+						<p>
+							If necessary, you may also contact:
+							<br />
+							<strong>Email:</strong> support@simrix.org
+						</p>
+
+					</div>
+				</section>
+			</article>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li>
+						<a href="#" class="icon brands fa-github">
+							<span class="label">GitHub</span>
+						</a>
+					</li>
+					<li>
+						<a href="mailto:support@simrix.org" class="icon solid fa-envelope">
+							<span class="label">Email</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; SIMRIX</li>
+					<li>All rights reserved</li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Formspree JS Submit -->
+		<script>
+			const supportForm = document.getElementById("support-form");
+			const successBox = document.getElementById("support-success");
+			const errorBox = document.getElementById("support-error");
+
+			supportForm.addEventListener("submit", async function (e) {
+				e.preventDefault();
+
+				const formData = new FormData(supportForm);
+
+				try {
+					const response = await fetch("https://formspree.io/f/mjgegvqb", {
+						method: "POST",
+						body: formData,
+						headers: { "Accept": "application/json" }
+					});
+
+					if (response.ok) {
+						supportForm.style.display = "none";
+						successBox.style.display = "block";
+					} else {
+						throw new Error("Submission failed");
+					}
+				} catch (err) {
+					errorBox.style.display = "block";
+				}
+			});
+		</script>
+
+	</body>
+</html>
