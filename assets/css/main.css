@@ -3583,6 +3583,27 @@ input, select, textarea {
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+
+		background-image: url("../../images/motorsport/fig_1.jpg");
+    	background-size: cover;
+    	background-position: center;
+    	background-repeat: no-repeat;
+	}
+
+	#banner:before {
+	    content: "";
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    background: rgba(0, 0, 0, 0.55);
+	    z-index: 0;
+	}
+	
+	#banner .inner {
+	    position: relative;
+	    z-index: 1;
 	}
 
 		#banner h2 {
@@ -3670,7 +3691,7 @@ input, select, textarea {
 		}
 
 			#banner .more:after {
-				background-image: url("../../images/motorsport/fig_1.jpg");
+				background-image: url("images/arrow.svg");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
@@ -3998,4 +4019,5 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
