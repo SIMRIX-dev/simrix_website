@@ -4012,3 +4012,13 @@ input, select, textarea {
 	    background-position: center;
 	    background-repeat: no-repeat;
 	}
+
+	.centered-section {
+	    text-align: center;
+	}
+	
+	.centered-section .inner {
+	    max-width: 900px;
+	    margin: 0 auto;
+	}
+
