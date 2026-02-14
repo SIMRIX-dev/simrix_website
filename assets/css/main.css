@@ -3830,24 +3830,6 @@ input, select, textarea {
 		text-align: center;
 		}
 
-		#main > header::before {
-		    content: "";
-		    position: absolute;
-		    inset: 0;
-		    background:
-		        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-		        var(--page-header-bg);
-		    background-size: cover;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    z-index: 0;
-		}
-		
-		#main > header > * {
-		    position: relative;
-		    z-index: 1;
-		}
-
 		#main > header h2 {
 			font-size: 1.75em;
 			margin: 0 0 0.5em 0;
@@ -4020,6 +4002,7 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
 
 
